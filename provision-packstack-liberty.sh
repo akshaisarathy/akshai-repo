@@ -31,7 +31,7 @@ iface3="$8"
 
 if [ -z "$(yum list installed | grep openstack-packstack | grep liberty)" ]; then
   sudo yum update -y
-  sudo yum install -y https://www.rdoproject.org/repos/rdo-release.rpm
+  sudo yum install -y "https://repos.fedorapeople.org/repos/openstack/openstack-liberty/rdo-release-liberty-1.noarch.rpm"
   sudo yum install -y openstack-packstack
   #re-install httpd
   sudo yum erase -y httpd
